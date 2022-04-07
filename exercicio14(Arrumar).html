@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 14</title>
+</head>
+<body>
+    <select id="passageiro">
+        <option value="1">Comum</option>
+        <option value="2">Estudante</option>
+        <option value="3">Idoso/PNE</option>
+    </select><br><br>
+    <select  id="passar">
+        <option value="1">Passagem única</option>
+        <option value="2">Passagem integração</option>
+    </select><br><br>
+    
+    <button onclick="preco()">Simular preço</button><br><br>
+
+    <div id="PrintPreco"></div>
+</body>
+</html>
+<script>
+    function preco() {
+        var PrecoUni=(passageiro.value*4.4);
+        var PrecoInt=(passageiro.value*5.9);
+
+        if(passageiro.value==1 && (passar.value==1 || passar==2 )){
+            if(passar.value==1){
+                
+            PrintPreco.innerHTML=`Valor da passagem escolhida: ${PrecoUni}`;
+            }
+            else{
+                
+            PrintPreco.innerHTML=`Valor da passagem escolhida: ${PrecoInt}`;
+            }
+        }
+        else if(passageiro.value==2 && (passar.value==1 || passar.value==2 )){
+            if(passar.value==1){
+                
+                PrintPreco.innerHTML=`Valor da passagem escolhida: ${PrecoUni*.5}`;
+                }
+                else{
+                    
+                PrintPreco.innerHTML=`Valor da passagem escolhida: ${PrecoInt*.5}`;
+                }        }
+        else{
+            PrintPreco.innerHTML="Você não pagará";
+        }
+    }
+</script>

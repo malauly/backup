@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 9</title>
+</head>
+<body>
+    <select  id="compra">
+        <option value="1">Carne bovina</option>
+        <option value="2">Soja</option>
+        <option value="3">Carne Suína</option>
+        <option value="4">Legumes</option>
+        <option value="5">Carne de peixe</option>
+        <option value="6">Fruta</option>
+        <option value="7">Ovo</option>
+    </select><br><br>
+
+    <button onclick="alimenta()">Tipo de alimentação</button>
+</body>
+</html>
+<script>
+    function alimenta(){
+        var compras= compra.value;
+        if(compras==1||compras==3|| compras==5 ||compras==7){
+            alert("Você não pode ser Vegano");
+        }
+        else if(compras==2|| compras==4||compras==6){
+            alert("Você pode ser Vegano");
+        }
+        else if(compras==2|| compras==4||compras==6|| compras==7){
+            alert("Você pode ser Vegetariano");
+        }
+        else{
+            alert("ERRO");
+        }
+    }
+</script>

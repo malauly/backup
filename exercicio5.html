@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 5</title>
+</head>
+<body>
+    <p>Digite a temperatura atual:</p>
+    <input type="text" id="temp"><br>
+
+    <button onclick="clima()">Analisar clima</button>
+</body>
+</html>
+<script>
+function clima(){
+    if(temp.value< 21 || temp.value>24){
+        alert("Alerta de desconforto!");
+        if(temp.value<21){
+            alert("As pessoas vão ter hipotermia");
+        }
+        else{
+            alert("As pessoas vão derreter");
+        }
+    }
+
+}
+
+</script>

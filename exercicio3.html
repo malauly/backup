@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 3</title>
+</head>
+<body>
+    <p>Digite o valor renda individual do usuário:</p>
+    <input type="text" id="rendaInd"><br>
+    
+    <p>Digite o valor renda familiar do usuário:</p>
+    <input type="text" id="rendaFam"><br>
+
+<button onclick="baneficio()">Terei o benefício</button>
+</body>
+</html>
+<script>
+    function baneficio(){
+        if(rendaInd.value<=2000 || rendaFam.value<=3000){
+        alert("Você terá direito ao auxílio");
+        }
+        else{
+            alert("Sem direito ao auxílio");
+        }
+    }
+</script>
